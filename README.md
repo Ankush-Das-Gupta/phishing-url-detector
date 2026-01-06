@@ -1,5 +1,5 @@
 # phishing-url-detector
-phishguard/
+ phishing-url-detector/
 │
 ├── app.py
 ├── train_model.py
