@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing URL Detector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="card">
+
+        <h1>🔐 Phishing URL Detector</h1>
+        <p class="subtitle">
+            Detect malicious URLs using intelligent security analysis
+        </p>
+
+        <!-- URL Form -->
+        <form method="POST">
+            <input
+                type="text"
+                name="url"
+                placeholder="Enter URL (e.g. https://example.com/login)"
+                required
+            >
+            <button type="submit">Analyze URL</button>
+        </form>
+
+        <!-- Result Section -->
+        {% if result %}
+        <div class="result-box">
+
+            <h2>{{ result }}</h2>
+            <p class="risk-text">Risk Level: <b>{{ risk }}</b></p>
+
+            <!-- Confidence Score -->
+            {% if confidence %}
+            <div class="confidence-section">
+                <div class="confidence-label">
+                    Confidence: {{ confidence }}%
+                </div>
+                <div class="confidence-bar">
+                    <div class="confidence-fill"
+                         style="width: {{ confidence }}%;"></div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Why Flagged -->
+            {% if reasons %}
+            <div class="reasons">
+                <h3>🧠 Why this URL was flagged</h3>
+                <ul>
+                    {% for reason in reasons %}
+                        <li>{{ reason }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+        </div>
+        {% endif %}
+
+        <!-- Footer Info -->
+        <div class="footer">
+            <p>
+                ⚠️ HTTPS does not always mean safe.  
+                Modern phishing attacks use trusted infrastructure.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #e5e7eb;
+}
+
+/* Center Layout */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card */
+.card {
+    width: 440px;
+    background: #020617;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+    text-align: center;
+}
+
+/* Title */
+.card h1 {
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #020617;
+    border: 1px solid #334155;
+    color: #e5e7eb;
+    outline: none;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+input:focus {
+    border-color: #38bdf8;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 10px;
+    background: #020617;
+    border: 1px solid #334155;
+    text-align: left;
+}
+
+.result-box h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.risk-text {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Confidence Bar */
+.confidence-section {
+    margin-bottom: 15px;
+}
+
+.confidence-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.confidence-bar {
+    width: 100%;
+    height: 12px;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #22c55e,
+        #facc15,
+        #ef4444
+    );
+}
+
+/* Reasons */
+.reasons h3 {
+    font-size: 15px;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.reasons ul {
+    font-size: 13px;
+    color: #cbd5f5;
+    list-style: none;
+}
+
+.reasons li {
+    margin-bottom: 6px;
+}
+
+.reasons li::before {
+    content: "⚠ ";
+    color: #facc15;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: center;
+}
