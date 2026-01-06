@@ -17,3 +17,22 @@
 │   ├── home.png
 │   ├── legit.png
 │   ├── phishing.png
+
+
+
+1. Install dependencies
+Copy code
+Bash
+pip install -r requirements.txt
+2. Train the model
+Copy code
+Bash
+python train_model.py
+3. Run the application
+Copy code
+Bash
+python app.py
+4. Open in browser
+Copy code
+
+http://127.0.0.1:5000/
